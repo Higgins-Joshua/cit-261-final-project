@@ -1,0 +1,30 @@
+{
+  "name": "cit-261-final-project",
+  "version": "1.0.0",
+  "description": "A movie api app for my final web project in cit-261",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Higgins-Joshua/cit-261-final-project.git"
+  },
+  "keywords": [
+    "heroku",
+    "javascript",
+    "html",
+    "css",
+    "ajax"
+  ],
+  "author": "Joshua Higgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Higgins-Joshua/cit-261-final-project/issues"
+  },
+  "homepage": "https://github.com/Higgins-Joshua/cit-261-final-project#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
