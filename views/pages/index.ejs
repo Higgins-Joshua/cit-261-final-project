@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <% include ../partials/header.ejs %>
-</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="ct" id="t1">
+          <div class="ct" id="t2">
+            <div class="ct" id="t3">
+              <div class="ct" id="t4">
+                <section>
+                  <ul>
+                    <a href="#t1">
+                      <li class="icon"><i class="fas fa-home"></i></li>
+                    </a>
+                    <a href="#t2">
+                      <li class="icon"><i class="fas fa-film"></i></li>
+                    </a>
+                    <a href="#t3">
+                      <li class="icon"><i class="fas fa-info"></i></li>
+                    </a>
+                    <a href="#t4">
+                      <li class="icon"><i class="fas fa-video"></i></li>
+                    </a>
+                  </ul>
+                  <div class="page" id="p1">
+                    <li class="icon"><span class="title">Search For a Movie</span></li>
+                  </div>
+                  <div class="page" id="p2">
+                    <li class="icon"><span class="title">Movie Info</span></li>
+                  </div>
+                  <div class="page" id="p3">
+                    <li class="icon"><span class="title">Movie Ratings</span></li>
+                  </div>
+                  <div class="page" id="p4">
+                    <li class="icon"><span class="title">About CIT Movie DB 261</span></li>
+                  </div>
+                  <p class="credit">CIT Movie Database 261</p>
+                </section>
+        
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div>
 
-  <% include ../partials/nav.ejs %>
-
-<div class="container">
-  <div class="row">
-    <h3>Hello</h3>
-    <p><%= apiUrl %></p>
-  </div> <!-- row -->
-</div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 
-</body>
+  </body>
 </html>
