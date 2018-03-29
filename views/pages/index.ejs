@@ -27,7 +27,16 @@
                     </a>
                   </ul>
                   <div class="page" id="p1">
-                    <li class="icon"><span class="title">Search For a Movie</span></li>
+                    <li class="icon">
+                      <h3>Search For a Movie</h3>
+                      <form onsubmit="searchDB(this)">
+                        <div class="form">
+                          <label for="movieTitle">Movie Title</label>
+                          <input type="text" class="form-control" id="movieTitle" aria-describedby="movietitle" placeholder="Enter movie title">
+                          <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                      </form>
+                    </li>
                   </div>
                   <div class="page" id="p2">
                     <li class="icon"><span class="title">Movie Info</span></li>
@@ -50,6 +59,7 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 
 
   </body>
