@@ -5,6 +5,7 @@ const YT_API_URL = `https://www.googleapis.com/youtube/v3/search?key=${YT_API_KE
 
 function searchDB(event, url) {
     document.querySelector('#movieRatings').innerHTML = '';
+    document.querySelector('#embedVideo').innerHTML = '';
     fetch(`${API_URL}&t=${event.movieTitle.value}`)
         .then(function(data){
             return data.json();
