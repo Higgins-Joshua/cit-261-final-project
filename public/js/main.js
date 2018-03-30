@@ -49,3 +49,15 @@ function populateMovieData(movieObj) {
       document.querySelector('#embedVideo').appendChild(ifrm);
     })
 }
+
+function goToP1() {
+  window.location.href = "#t1";
+}
+
+function goToP3() {
+  window.location.href = "#t3";
+}
+
+function goToP4() {
+  window.location.href = "#t4";
+}
