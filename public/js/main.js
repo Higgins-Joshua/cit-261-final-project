@@ -1,5 +1,7 @@
 const API_KEY = '8b847caf'
 const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`
+const YT_API_KEY = 'AIzaSyAV6o7zGYoPS_5TxASAXM7IXGegO5ZYHe0'
+const YT_API_URL = `https://www.googleapis.com/youtube/v3/search?key=${YT_API_KEY}&part=snippet`
 
 function searchDB(event, url) {
     document.querySelector('#movieRatings').innerHTML = '';
@@ -9,8 +11,8 @@ function searchDB(event, url) {
         })
 
         .then(function(json) {
-            // console.log(json.Ratings.map(source => console.log(source.Source + ' ' + source.Value)));
             populateMovieData(json);
+            window.location.href = "#t2";
         })
 
     event.movieTitle.value = '';
@@ -24,10 +26,26 @@ function populateMovieData(movieObj) {
   document.querySelector('#genre').innerHTML = movieObj.Genre;
   document.querySelector('#movieImage').src = movieObj.Poster;
 
-  // document.querySelector('#movieRatings').innerHTML =
   movieObj.Ratings.map(rating =>
     document.querySelector('#movieRatings').innerHTML += (`<li>${rating.Source}: ${rating.Value}</li>`)
   );
 
-  console.log(movieObj);
+  fetch(`${YT_API_URL}&q=${movieObj.Title} trailer`)
+    .then(function(data) {
+      return data.json();
+    })
+
+    .then(function(json) {
+      var videoId = json.items[0].id.videoId;
+      var iframeURL = `https://www.youtube.com/embed/${videoId}`;
+      var videoTitle = json.items[0].snippet.title;
+
+      document.querySelector('#embedVideoTitle').innerHTML = videoTitle;
+
+      var ifrm = document.createElement('iframe');
+      ifrm.setAttribute('src', `${iframeURL}`);
+      ifrm.setAttribute('width', '500px');
+      ifrm.setAttribute('height', '300px');
+      document.querySelector('#embedVideo').appendChild(ifrm);
+    })
 }
